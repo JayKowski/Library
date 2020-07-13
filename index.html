@@ -7,10 +7,16 @@
     <body>
         <div class="wrapper">
             <h1>My Library Books Available</h1>
-            <div id="book-list">
-                
-            </div>
+            <div id="book-list"></div>
         </div>
+
+        <form id="new-book">
+            <input type="text" name="name" placeholder="Book Name">
+            <input type="text" name="author" placeholder="Book Author">
+            <input type="number" name="pages" placeholder="Number of Pages">
+            <input type="checkbox" name="read">
+            <button type="submit" id="submitbtn">Submit</button>
+        </form>
         <script src="index.js"></script>
     </body>
 </html>

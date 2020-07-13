@@ -1,8 +1,10 @@
 let myLibrary = [];
 
-function Book(title, author){
+function Book(title, author, numberOfPages, read){
     this.title = title,
-    this.author = author
+    this.author = author,
+    this.numberOfPages = numberOfPages,
+    this.read = read
 };
 
 function addBookToLibrary(...args){
@@ -21,3 +23,14 @@ document.getElementById('book-list').innerHTML = myLibrary.map(book =>
       <div>Author: ${book.author}</div>
     </div>`
 ).join('')
+
+
+$("#addform").submit(function (e) {
+    e.preventDefault();
+    let book = new Book    ($("input[name = 'name']").val(),
+                            $("input[name = 'author']").val(),
+                            $("input[name = 'pages']").val(),
+                            $("input[name = 'read']").val());
+    list.push(book);
+    console.log(list);
+});
