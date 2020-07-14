@@ -16,6 +16,12 @@ Some of the features of this project include:
 - Create new books
 - Update their read status
 
+## Live Link
+
+To preview the project check this link:
+
+[Live Project](https://rawcdn.githack.com/JayKowski/Library/6a83d3188df1a20d4f3984564796687c2f6131a9/index.html)
+
 ## Technologies Used
 
 This project utilizes:
