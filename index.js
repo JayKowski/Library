@@ -29,7 +29,7 @@ myLibrary.forEach(function (book) {
     li2.classList.add('book-author')
     let li3 = document.createElement('LI')
     li3.classList.add('book-pages')
-    let li4 = document.createElement('LI')
+    let li4 = document.createElement('BUTTON')
     li4.classList.add('book-read')
     let deleteButton = document.createElement('BUTTON')
     deleteButton.classList.add('delete-btn')
@@ -73,7 +73,7 @@ form.addEventListener('submit', function (e) {
         li2.classList.add('book-author')
         let li3 = document.createElement('LI')
         li3.classList.add('book-pages')
-        let li4 = document.createElement('LI')
+        let li4 = document.createElement('BUTTON')
         li4.classList.add('book-read')
         let deleteButton = document.createElement('BUTTON')
         deleteButton.classList.add('delete-btn')
@@ -92,7 +92,7 @@ form.addEventListener('submit', function (e) {
         ul.appendChild(deleteButton)
 
         bookList.appendChild(ul)
-
+        console.log(read);
         alert("success, all fields available")
     } else {
         alert("not all fields are checked")
@@ -100,13 +100,25 @@ form.addEventListener('submit', function (e) {
 
 });
 
-const deleteBook = document.querySelector('#book-list')
+const booksEvent = document.querySelector('#book-list')
 
-console.log(deleteBook)
+console.log(booksEvent)
 
-deleteBook.addEventListener('click', (e) => {
+booksEvent.addEventListener('click', (e) => {
     if(e.target.className == 'delete-btn') {
         const ul = e.target.parentElement;
         ul.parentNode.removeChild(ul);
     }
-})
+});
+
+booksEvent.addEventListener('click', (e) => {
+    if(e.target.className == 'book-read') {
+        const status = e.target;
+        console.log(status);
+        if (status.innerText == 'Read: true') {
+            status.innerText = 'Read: false'
+        } else if (status.innerText == 'Read: false') {
+            status.innerText = 'Read: true'
+        }
+    }
+});
