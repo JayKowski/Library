@@ -122,11 +122,12 @@ booksEvent.addEventListener('click', (e) => {
   }
 });
 
+// eslint-disable-next-line
 function showForm() {
-  let x = document.getElementById("new-book");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  const x = document.getElementById('new-book');
+  if (x.style.display === 'block') {
+    x.style.display = 'none';
   } else {
-    x.style.display = "block";
+    x.style.display = 'block';
   }
-};
+}
