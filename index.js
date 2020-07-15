@@ -13,7 +13,7 @@ function addBookToLibrary(...args) {
 
 const bookOne = new Book('Test 1', 'Joe', 234, true);
 const bookTwo = new Book('Test 2', 'Sam', 234, true);
-const bookThree = new Book('Test 3', 'Leo', 234, true);
+const bookThree = new Book('Test 3', 'Max', 234, true);
 
 addBookToLibrary(bookOne, bookTwo, bookThree);
 
