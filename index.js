@@ -121,3 +121,12 @@ booksEvent.addEventListener('click', (e) => {
     }
   }
 });
+
+function showForm() {
+  let x = document.getElementById("new-book");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+};
